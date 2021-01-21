@@ -1,18 +1,17 @@
 package model;
+import java.io.Serializable;
 
-import java.time.LocalDate;
-
-public class Contact {
-    private int numberPhone;
+public class Contact implements Serializable {
+    private String numberPhone;
     private String group;
     private String fullName;
     private String gender;
     private String address;
-    private LocalDate birthday;
+    private String birthday;
     private String email;
     public Contact(){};
 
-    public Contact(int numberPhone, String group, String fullName, String gender, String address, LocalDate birthday, String email) {
+    public Contact(String numberPhone, String group, String fullName, String gender, String address, String birthday, String email) {
         this.numberPhone = numberPhone;
         this.group = group;
         this.fullName = fullName;
@@ -22,11 +21,11 @@ public class Contact {
         this.email = email;
     }
 
-    public int getNumberPhone() {
+    public String getNumberPhone() {
         return numberPhone;
     }
 
-    public void setNumberPhone(int numberPhone) {
+    public void setNumberPhone(String numberPhone) {
         this.numberPhone = numberPhone;
     }
 
@@ -62,11 +61,11 @@ public class Contact {
         this.address = address;
     }
 
-    public LocalDate getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(LocalDate birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
