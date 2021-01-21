@@ -106,8 +106,9 @@ public class Main {
         return email;
     }
     public static String getBirthday(){
+        Scanner input=new Scanner(System.in);
         System.out.println("Nhập ngày sinh dd-mm-yyyy");
-        String birthday=scanner.nextLine();
+        String birthday=input.nextLine();
         if (!birthday.matches(REGEX_BIRTHDAY)){
             do {
                 System.out.println("Mời nhập lại");
