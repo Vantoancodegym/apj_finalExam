@@ -31,9 +31,9 @@ public class ReadAndWrite {
         try {
             FileWriter fileWriter=new FileWriter(fileName);
             BufferedWriter writer=new BufferedWriter(fileWriter);
-            writer.write("Số điên thoại"+"\t"+"Tên"+"\t"+"Email"+"\n");
+            writer.write("Số điên thoại"+","+"Tên"+","+"Email"+"\n");
             for (Contact contact:list) {
-                writer.write(contact.getNumberPhone()+"\t"+contact.getFullName()+"\t"+contact.getEmail()+"\n");
+                writer.write(contact.getNumberPhone()+","+contact.getFullName()+","+contact.getEmail()+"\n");
             }
             writer.close();
         } catch (IOException e) {
